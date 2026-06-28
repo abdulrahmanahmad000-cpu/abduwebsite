@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For My Cutie Abdu</title>
+  <style>
+    body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(135deg,#ffd6e7,#fff0f5);overflow:hidden}
+    .card{background:rgba(255,255,255,.93);padding:42px 30px;border-radius:24px;box-shadow:0 20px 60px rgba(0,0,0,.12);text-align:center;width:min(92vw,560px);position:relative}
+    h1{font-size:clamp(28px,4vw,44px);margin:0 0 18px;color:#8b1d5a}
+    p{font-size:18px;color:#5f3450;margin:0 0 26px;line-height:1.5}
+    .buttons{display:flex;gap:16px;justify-content:center;align-items:center;flex-wrap:wrap;position:relative;min-height:72px}
+    button,.linkbtn{border:none;padding:16px 34px;font-size:18px;border-radius:999px;cursor:pointer;transition:transform .15s ease,box-shadow .15s ease,left .2s ease,top .2s ease;box-shadow:0 10px 25px rgba(0,0,0,.12);position:relative;text-decoration:none;display:inline-block}
+    #yesBtn{background:#ff4f8b;color:#fff}
+    #noBtn{background:#ffd1df;color:#8b1d5a}
+    .socials{margin-top:24px;display:none;gap:14px;justify-content:center;flex-wrap:wrap}
+    .socials a{background:#fff;color:#8b1d5a;border:2px solid #ffc1d5}
+    button:hover,.linkbtn:hover{transform:scale(1.05)}
+    .message{margin-top:24px;font-size:18px;color:#8b1d5a;min-height:28px;font-weight:700}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>do u forgive ur little cutie abdu</h1>
+    <p>press yes pls, i made this for you 💖</p>
+    <div class="buttons" id="buttonArea">
+      <button id="yesBtn">Yes</button>
+      <button id="noBtn">No</button>
+    </div>
+    <div class="socials" id="socials">
+      <a class="linkbtn" href="https://www.instagram.com/abdlrhmn99_?igsh=YTdvcGcweHhzbHE0" target="_blank" rel="noopener">Instagram</a>
+      <a class="linkbtn" href="https://www.snapchat.com/add/manlikeai99?share_id=FPoGOaTBSu8&locale=en-US" target="_blank" rel="noopener">Snapchat</a>
+    </div>
+    <div class="message" id="message"></div>
+  </div>
+  <script>
+    const noBtn=document.getElementById('noBtn'),yesBtn=document.getElementById('yesBtn'),message=document.getElementById('message'),buttonArea=document.getElementById('buttonArea'),socials=document.getElementById('socials');
+    function moveNoButton(){const a=buttonArea.getBoundingClientRect(),b=noBtn.getBoundingClientRect(),x=Math.random()*Math.max(0,a.width-b.width),y=Math.random()*Math.max(0,a.height-b.height);noBtn.style.position='absolute';noBtn.style.left=x+'px';noBtn.style.top=y+'px'}
+    noBtn.addEventListener('mouseenter',moveNoButton);noBtn.addEventListener('click',moveNoButton);noBtn.addEventListener('touchstart',function(e){e.preventDefault();moveNoButton()},{passive:false});
+    yesBtn.addEventListener('click',function(){message.textContent='yayyy thank uuu 💖';socials.style.display='flex'});
+  </script>
+</body>
+</html>
